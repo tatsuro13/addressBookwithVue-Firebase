@@ -29,6 +29,9 @@
 
 <script>
 export default {
+    created(){
+        this.addresses = this.$store.state.addresses
+    },
     data(){
         return{
             headers: [
@@ -37,20 +40,7 @@ export default {
                 {text: 'メールアドレス', value: 'email'},
                 {text: '住所', value: 'address'},
             ],
-            addresses: [
-                {
-                    name: '友人AAA',
-                    tel: '090-0000-1111',
-                    email: 'sample@example.com',
-                    addresse: '東京都港区'
-                },
-                {
-                    name: '友人BBB',
-                    tel: '090-5555-1111',
-                    email: 'sample@example.com',
-                    addresse: '東京都品川区'
-                }
-            ]
+            addresses: []
         }
     }
 }
